@@ -1,8 +1,8 @@
 class Summation{
-	ofN(n){
+	static ofN(n){
 		return n*(n+1)/2;
 	}
-	ofNSkipM(n,m){
+	static ofNSkipM(n,m){
 		return Summation.ofN(Math.floor(n/m))*m;
 	}
 }
