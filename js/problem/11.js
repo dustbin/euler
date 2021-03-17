@@ -1,4 +1,29 @@
-let bigblock = [
+function problem11(n){
+	let t,max=0;
+	for(let i=0;i<problem11.bigblock.length;++i){
+		for(let j=0;j<problem11.bigblock[i].length;++j){
+			if(j+(n-1)<problem11.bigblock[i].length){
+				if(i>(n-1)){
+					t = problem11.bigblock[i][j]*problem11.bigblock[i-1][j+1]*problem11.bigblock[i-2][j+2]*problem11.bigblock[i-3][j+3];
+					if(t>max){max = t;}
+				}
+				t = problem11.bigblock[i][j]*problem11.bigblock[i][j+1]*problem11.bigblock[i][j+2]*problem11.bigblock[i][j+3];
+				if(t>max){max = t;}
+				if(i+(n-1)<problem11.bigblock.length){
+					t = problem11.bigblock[i][j]*problem11.bigblock[i+1][j+1]*problem11.bigblock[i+2][j+2]*problem11.bigblock[i+3][j+3];
+					if(t>max){max = t;}
+				}
+			}
+			if(i+(n-1)<problem11.bigblock.length){
+				t = problem11.bigblock[i][j]*problem11.bigblock[i+1][j]*problem11.bigblock[i+2][j]*problem11.bigblock[i+3][j];
+				if(t>max){max = t;}
+			}
+		}
+	}
+	return max;
+}
+
+problem11.bigblock = [
 [ 8, 2,22,97,38,15, 0,40, 0,75, 4, 5, 7,78,52,12,50,77,91, 8],
 [49,49,99,40,17,81,18,57,60,87,17,40,98,43,69,48, 4,56,62, 0],
 [81,49,31,73,55,79,14,29,93,71,40,67,53,88,30, 3,49,13,36,65],
@@ -20,28 +45,3 @@ let bigblock = [
 [20,73,35,29,78,31,90, 1,74,31,49,71,48,86,81,16,23,57, 5,54],
 [ 1,70,54,71,83,51,54,69,16,92,33,48,61,43,52, 1,89,19,67,48]
 ];
-
-function findAdjacent(n){
-	let t,max=0;
-	for(let i=0;i<bigblock.length;++i){
-		for(let j=0;j<bigblock[i].length;++j){
-			if(j+(n-1)<bigblock[i].length){
-				if(i>(n-1)){
-					t = bigblock[i][j]*bigblock[i-1][j+1]*bigblock[i-2][j+2]*bigblock[i-3][j+3];
-					if(t>max){max = t;}
-				}
-				t = bigblock[i][j]*bigblock[i][j+1]*bigblock[i][j+2]*bigblock[i][j+3];
-				if(t>max){max = t;}
-				if(i+(n-1)<bigblock.length){
-					t = bigblock[i][j]*bigblock[i+1][j+1]*bigblock[i+2][j+2]*bigblock[i+3][j+3];
-					if(t>max){max = t;}
-				}
-			}
-			if(i+(n-1)<bigblock.length){
-				t = bigblock[i][j]*bigblock[i+1][j]*bigblock[i+2][j]*bigblock[i+3][j];
-				if(t>max){max = t;}
-			}
-		}
-	}
-	return max;
-}

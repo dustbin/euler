@@ -1,5 +1,5 @@
 class Prime {
-	let primes = [2];
+	primes = [2];
 	constructor(){
 	}
 	getPrime(index){
