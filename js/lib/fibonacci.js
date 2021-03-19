@@ -10,7 +10,8 @@ class Fibonacci{
 	}
 	buildFibonacci(length){
 		while(this.fibs.length<length){
-			
+			let i = this.fibs.length;
+			this.fibs.push(this.fibs[i-2]+this.fibs[i-1]);
 		}
 	}
 }
