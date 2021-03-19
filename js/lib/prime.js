@@ -3,11 +3,10 @@ class Prime {
 	constructor(){
 	}
 	getPrime(index){
-		if(this.primes.length>index){
-			return primes[index];
+		if(this.primes.length<=index){
+			this.buildPrimes(index+1);
 		}
-		this.buildPrimes(index+1);
-		return primes[index];
+		return this.primes[index];
 	}
 	buildPrimes(length){
 		if(this.primes.length>=length){return;}
