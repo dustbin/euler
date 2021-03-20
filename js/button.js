@@ -28,8 +28,8 @@ class Button{
 }
 
 window.onload = function(){
-	for(let b in Button.buttons){
-		document.body.appendChild(b);
+	for(let i in Button.buttons){
+		document.body.appendChild(Button.buttons[i]);
 	}
 	Button.loaded = true;
 };
