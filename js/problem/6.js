@@ -1,16 +1,6 @@
-function sumn(n){return (n*n+n)/2;}
-function sumofsquares(n){
-	let sum = 0;
-	for(let i=1;i<=n;++i){
-		sum += i*i;
-	}
-	return sum;
-}
-function sumsquaredifference(n){
-	let t = sumn(n);
-	return t*t - sumofsquares(n);
-}
 function problem6(){
-	return 1;
+	let n = Summation.ofN(100);
+	let n2 = Summation.ofN2(100);
+	return n-n2;
 }
 Button.create("problem 6",problem6,25164150);
