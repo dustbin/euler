@@ -2,20 +2,20 @@ class Button{
 	static buttons = [];
 	static create(title,func,answer){
 		let div = document.createElement("div");
-		let button = document.createElement("div");
-		div.appendChild(button);
-		let answer = document.createElelment("div");
-		div.appendChild(answer);
+		let div_b = document.createElement("div");
+		div.appendChild(div_b);
+		let div_a = document.createElelment("div");
+		div.appendChild(div_a);
 
-		button.text = title;
-		button.onclick(function(){
+		div_b.textContent = title;
+		div_b.onclick(function(){
 			let res = func();
-			answer.text = res;
+			div_a.textContent = res;
 			if(answer!=null){
 				if(answer==res){
-					answer.style="color: green;";
+					div_a.style="color: green;";
 				}else{
-					answer.style="color: red;";
+					div_a.style="color: red;";
 				}
 			}
 		});
