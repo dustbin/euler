@@ -1,20 +1,12 @@
-function isprime(i,primes){
-	for(let j in primes){
-		if(primes[j]*primes[j]>i){return true;}
-		if(i%primes[j]==0){return false;}
-	}
-	return true;
-}
-function findsmallestmultiple(n){
+function problem5(){
+	let prime = new Prime();
 	let total = 1;
-	let primes = [];
-	for(let i=2;i<=n;++i){
-		if(isprime(i,primes)){
-			primes.push(i);
-			let t = i;
-			while(t*i<n){t*=i;}
-			total*=t;
-		}
+	for(let i=0;;++i){
+		let p = prime.getPrime(i);
+		if(p>20){break;}
+		let t = p;
+		while(t*p<20){t*=p;}
+		total*=t;
 	}
 	return total;
 }
