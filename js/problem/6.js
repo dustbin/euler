@@ -10,3 +10,7 @@ function sumsquaredifference(n){
 	let t = sumn(n);
 	return t*t - sumofsquares(n);
 }
+function problem6(){
+	return 1;
+}
+Button.create("problem 6",problem6,null);
