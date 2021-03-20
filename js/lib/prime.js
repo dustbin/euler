@@ -27,7 +27,7 @@ class Prime {
 				if(n>1){ret.push([p,1]);}
 				break;
 			}
-			while(n%p=0){
+			while(n%p==0){
 				++t;
 				n/=p;
 			}
