@@ -1,4 +1,5 @@
 class Button{
+	static loaded = false;
 	static buttons = [];
 	static create(title,func,answer){
 		let div = document.createElement("div");
@@ -19,6 +20,10 @@ class Button{
 				}
 			}
 		};
+		Button.buttons.push(div);
+		if(Button.loaded){
+			document.body.appendChild(div);
+		}
 	}
 }
 
@@ -26,4 +31,5 @@ window.onload = function(){
 	for(let b in Button.buttons){
 		document.body.appendChild(b);
 	}
+	Button.loaded = true;
 };
