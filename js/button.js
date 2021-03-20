@@ -4,7 +4,7 @@ class Button{
 		let div = document.createElement("div");
 		let div_b = document.createElement("div");
 		div.appendChild(div_b);
-		let div_a = document.createElelment("div");
+		let div_a = document.createElement("div");
 		div.appendChild(div_a);
 
 		div_b.textContent = title;
