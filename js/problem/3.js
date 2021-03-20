@@ -3,5 +3,4 @@ function problem3(){
 	let factors = prime.factors(600851475143);
 	return factors[factors.length-1][0];
 }
-problem3.answer = 6857;
-Button.create("problem 3",problem3,problem3.answer);
+Button.create("problem 3",problem3,6857);

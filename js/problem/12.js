@@ -13,3 +13,8 @@ function findDivisors(n,primes){
 		if(n==1){break;}
 	}
 }
+
+function problem12(){
+	return 1;
+}
+Button.create("problem 12",problem12,null);

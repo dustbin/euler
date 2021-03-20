@@ -40,3 +40,7 @@ function findmaxinblock(n){
 	}
 	return max;
 }
+function problem8(){
+	return 1;
+}
+Button.create("problem 8",problem8,23514624000);

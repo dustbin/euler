@@ -14,3 +14,7 @@ function primen(n){
 	}
 	return primes[n-1];
 }
+function problem7(){
+	return 1;
+}
+Button.create("problem 7",problem7,104743);

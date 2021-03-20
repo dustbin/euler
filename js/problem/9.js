@@ -9,3 +9,7 @@ function findTriplet(n){
 	}
 	return -1;
 }
+function problem9(){
+	return 1;
+}
+Button.create("problem 9",problem9,31875000);

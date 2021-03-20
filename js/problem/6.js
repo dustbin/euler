@@ -13,4 +13,4 @@ function sumsquaredifference(n){
 function problem6(){
 	return 1;
 }
-Button.create("problem 6",problem6,null);
+Button.create("problem 6",problem6,25164150);

@@ -14,3 +14,7 @@ function sumOfPrimes(n){
 	}
 	return primes.reduce((a,c)=>a+c,0);
 }
+function problem10(){
+	return 1;
+}
+Button.create("problem 10",problem10,142913828922);
