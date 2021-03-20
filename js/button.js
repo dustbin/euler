@@ -8,7 +8,7 @@ class Button{
 		div.appendChild(div_a);
 
 		div_b.textContent = title;
-		div_b.onclick(function(){
+		div_b.onclick = function(){
 			let res = func();
 			div_a.textContent = res;
 			if(answer!=null){
@@ -18,7 +18,7 @@ class Button{
 					div_a.style="color: red;";
 				}
 			}
-		});
+		};
 	}
 }
 
