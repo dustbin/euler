@@ -7,3 +7,4 @@ function problem2(){
 	return sum;
 }
 problem2.answer = 4613732;
+Button.create("problem 2",problem2,problem2.answer);

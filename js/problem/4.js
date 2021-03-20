@@ -7,3 +7,4 @@ function problem4(){
 	return 0;
 }
 problem4.answer = 906609;
+Button.create("problem 4",problem4,problem4.answer);

@@ -4,3 +4,4 @@ function problem3(){
 	return factors[factors.length-1][0];
 }
 problem3.answer = 6857;
+Button.create("problem 3",problem3,problem3.answer);
