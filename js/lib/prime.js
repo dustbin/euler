@@ -35,5 +35,6 @@ class Prime {
 				ret.push([p,t]);
 			}
 		}
+		return ret;
 	}
 }
