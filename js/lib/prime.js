@@ -24,7 +24,7 @@ class Prime {
 			let p = this.getPrime(i);
 			let t = 0;
 			if(n<p*p){
-				if(n>1){ret.push([p,1]);}
+				if(n>1){ret.push([n,1]);}
 				break;
 			}
 			while(n%p==0){
