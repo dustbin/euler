@@ -2,7 +2,7 @@ class Summation{
 	current = 0;
 	stack = [];
 	constructor(a){
-		if(a.isArray()){
+		if(Array.isArray(a)){
 			this.stack = a;
 			this.current = this.stack.reduce((a,c) => a+c,0);
 		}
