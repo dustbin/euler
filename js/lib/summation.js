@@ -1,4 +1,12 @@
 class Summation{
+	current = 0;
+	stack = [];
+	constructor(a){
+		if(a.class == Array){
+			this.stack = a;
+			this.current = this.stack.reduce((a,c) => a+c,0);
+		}
+	}
 	static ofN(n){
 		return n*(n+1)/2;
 	}

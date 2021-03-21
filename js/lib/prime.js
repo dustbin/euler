@@ -18,6 +18,16 @@ class Prime {
 			}
 		}
 	}
+	buildLessThan(n){
+		if(this.primes[this.primes.length-1]>=n){return;}
+		for(let i=this.primes[this.primes.length-1]+1;i<n;++i){
+			for(let j=0;;++j){
+				let p = this.primes[j];
+				if(i<p*p){this.primes.push(i);break;}
+				if(i%p==0){break;}
+			}
+		}
+	}
 	factors(n){
 		let ret = [];
 		for(let i=0;;++i){
