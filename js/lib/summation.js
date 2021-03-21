@@ -19,6 +19,9 @@ class PiSummation{
 	stack = [];
 	constructor(){
 	}
+	get length(){
+		return this.stack.length;
+	}
 	push(n){
 		n = Number(n);
 		this.stack.push(n);
