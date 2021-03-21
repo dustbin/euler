@@ -13,3 +13,45 @@ class Summation{
 		return Summation.ofN(Math.floor(n/m))*m;
 	}
 }
+class PiSummation{
+	dirty = true;
+	current = 0;
+	stack = [];
+	constructor(){
+	}
+	push(n){
+		n = Number(n);
+		this.stack.push(n);
+		this.add(n);
+	}
+	pop(){
+		this.remove(this.stack.pop());
+	}
+	unshift(n){
+		n = Number(n);
+		this.stack.unshift(n);
+		this.add(n);
+	}
+	shift(){
+		this.remove(this.stack.shift());
+	}
+	add(n){
+		if(this.dirty){
+			if(this.stack.length==0){return;}
+			this.current = 1;
+			for(let i=0;i<this.stack.length;++i){
+				this.current *= this.stack[i];
+			}
+			this.dirty = false;
+		}else{
+			this.current *= n;
+		}
+	}
+	remove(n){
+		if(n==0){
+			this.dirty = true;
+		}else{
+			this.current /= n;
+		}
+	}
+}

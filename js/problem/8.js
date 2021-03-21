@@ -1,4 +1,17 @@
-let bigblock =
+function problem8(){
+	let pisum = new PiSummation();
+	let max = 0;
+	for(let i=0;i<problem8.bigblock.length;++i){
+		if(pisum.length==13){
+			pisum.shift();
+		}
+		pisum.push(problem8.bigblock[i]);
+		if(pisum.current>max){max = pisum.current;}
+	}
+	return max;
+}
+
+problem8.bigblock =
 "73167176531330624919225119674426574742355349194934"+
 "96983520312774506326239578318016984801869478851843"+
 "85861560789112949495459501737958331952853208805511"+
@@ -20,27 +33,4 @@ let bigblock =
 "05886116467109405077541002256983155200055935729725"+
 "71636269561882670428252483600823257530420752963450";
 
-function findmaxinblock(n){
-	let stack = [];
-	let current = 1;
-	let max = 0;
-	for(let i=0;i<bigblock.length;++i){
-		if(i>=n){
-			let t = stack.shift();
-			if(t==0){
-				current=stack.reduce((a,c)=>a*c,1);
-			}else{
-				current/=t;
-			}
-		}
-		let t = Number(bigblock[i]);
-		current*=t;
-		stack.push(t);
-		if(current>max){max = current;}
-	}
-	return max;
-}
-function problem8(){
-	return 1;
-}
 Button.create("problem 8",problem8,23514624000);
