@@ -1,20 +1,20 @@
-function problem11(n){
+function problem11(){
 	let t,max=0;
 	for(let i=0;i<problem11.bigblock.length;++i){
 		for(let j=0;j<problem11.bigblock[i].length;++j){
-			if(j+(n-1)<problem11.bigblock[i].length){
-				if(i>(n-1)){
+			if(j+3<problem11.bigblock[i].length){
+				if(i>=3){
 					t = problem11.bigblock[i][j]*problem11.bigblock[i-1][j+1]*problem11.bigblock[i-2][j+2]*problem11.bigblock[i-3][j+3];
 					if(t>max){max = t;}
 				}
 				t = problem11.bigblock[i][j]*problem11.bigblock[i][j+1]*problem11.bigblock[i][j+2]*problem11.bigblock[i][j+3];
 				if(t>max){max = t;}
-				if(i+(n-1)<problem11.bigblock.length){
+				if(i+3<problem11.bigblock.length){
 					t = problem11.bigblock[i][j]*problem11.bigblock[i+1][j+1]*problem11.bigblock[i+2][j+2]*problem11.bigblock[i+3][j+3];
 					if(t>max){max = t;}
 				}
 			}
-			if(i+(n-1)<problem11.bigblock.length){
+			if(i+3<problem11.bigblock.length){
 				t = problem11.bigblock[i][j]*problem11.bigblock[i+1][j]*problem11.bigblock[i+2][j]*problem11.bigblock[i+3][j];
 				if(t>max){max = t;}
 			}
