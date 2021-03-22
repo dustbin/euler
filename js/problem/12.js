@@ -8,4 +8,4 @@ function problem12(){
 		}
 	}
 }
-Button.create("problem 12",problem12,null);
+Button.create("problem 12",problem12,76576500);
