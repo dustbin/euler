@@ -1,10 +1,10 @@
 function problem12(){
 	let prime = new Prime();
 	for(let i = 1;;++i){
-		let t = Summation.ofN(i);
-		let f = prime.factors(t);
-		if(f.reduce((a,c)=>a+a*c,1)>500){
-			return t;
+		let tNum = Summation.ofN(i);
+		let divisors = prime.factors(tNum).reduce((a,c)=>a+a*c[1],1);
+		if(divisors>500){
+			return tNum;
 		}
 	}
 }
