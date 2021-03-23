@@ -1,5 +1,10 @@
 function problem13(){
-	//TODO: big int class
+	let ret = 0n;
+	for(let i=0;i<problem13.numbers.length;++i){
+		ret = ret+BigInt(problem13.numbers[i]);
+	}
+	ret = ret.toString();
+	return ret.slice(0,10);
 }
 problem13.numbers = [
 	"37107287533902102798797998220837590246510135740250",
@@ -103,3 +108,4 @@ problem13.numbers = [
 	"20849603980134001723930671666823555245252804609722",
 	"53503534226472524250874054075591789781264330331690"
 ];
+Button.create("problem 13",problem13,null);
