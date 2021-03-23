@@ -1,5 +1,5 @@
 class Collatz{
-	let values = [0,0];
+	values = [0,0];
 	constructor(){
 	}
 	solve(n){
