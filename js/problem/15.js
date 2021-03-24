@@ -3,7 +3,7 @@ function problem15(){
 	for(let i=0;i<=20;++i){
 		for(let j=0;j<=20;++j){
 			if(j==0){
-				grid[i][j]=1;
+				grid[i] = [1];
 			}else{
 				if(i==0){
 					grid[i][j]=1;
