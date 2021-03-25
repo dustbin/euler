@@ -1,6 +1,8 @@
-class Button{
+export Problem;
+
+class Problem{
 	static loaded = false;
-	static buttons = [];
+	static problems = [];
 	static create(title,func,answer){
 		let div = document.createElement("div");
 		let div_b = document.createElement("div");
@@ -20,16 +22,15 @@ class Button{
 				}
 			}
 		};
-		Button.buttons.push(div);
-		if(Button.loaded){
+		Problem.problems.push(div);
+		if(Problem.loaded){
 			document.body.appendChild(div);
 		}
 	}
-}
-
-window.onload = function(){
-	for(let i in Button.buttons){
-		document.body.appendChild(Button.buttons[i]);
+	static generateButtons(){
+		for(let i in Problem.problems){
+			document.body.appendChild(Problem.problems[i]);
+		}
+		Problem.loaded = true;
 	}
-	Button.loaded = true;
-};
+}
