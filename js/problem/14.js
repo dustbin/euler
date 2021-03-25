@@ -11,4 +11,4 @@ function problem14(){
 	}
 	return n;
 }
-Button.create("problem 14",problem14,837799);
+Problem.create("problem 14",problem14,837799);

@@ -10,4 +10,4 @@ function problem5(){
 	}
 	return total;
 }
-Button.create("problem 5",problem5,232792560);
+Problem.create("problem 5",problem5,232792560);

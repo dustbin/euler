@@ -4,4 +4,4 @@ function problem10(){
 	let sum = new Summation(prime.primes);
 	return sum.current;
 }
-Button.create("problem 10",problem10,142913828922);
+Problem.create("problem 10",problem10,142913828922);

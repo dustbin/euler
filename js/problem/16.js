@@ -8,4 +8,4 @@ function problem16(){
 	}
 	return BigInt.asIntN(32,ret);
 }
-Button.create("problem 16",problem16,null);
+Problem.create("problem 16",problem16,null);

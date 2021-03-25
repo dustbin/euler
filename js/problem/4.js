@@ -6,4 +6,4 @@ function problem4(){
 	}
 	return 0;
 }
-Button.create("problem 4",problem4,906609);
+Problem.create("problem 4",problem4,906609);

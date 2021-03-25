@@ -6,4 +6,4 @@ function problem2(){
 	}
 	return sum;
 }
-Button.create("problem 2",problem2,4613732);
+Problem.create("problem 2",problem2,4613732);

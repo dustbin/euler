@@ -15,4 +15,4 @@ function problem15(){
 	}
 	return grid[20][20];
 }
-Button.create("problem 15",problem15,137846528820);
+Problem.create("problem 15",problem15,137846528820);
