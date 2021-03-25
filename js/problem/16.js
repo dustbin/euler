@@ -8,4 +8,4 @@ function problem16(){
 	}
 	return ret;
 }
-Problem.create("problem 16",problem16,null);
+Problem.create("problem 16",problem16,1366);
