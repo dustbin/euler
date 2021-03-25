@@ -1,10 +1,10 @@
 function problem16(){
-	let ret = 0;
+	let ret = 0n;
 	let num = 1n << 1000n;
-	while(num>0){
-		ret += num%10;
-		num -= num%10;
-		num /= 10;
+	while(num>0n){
+		ret += num%10n;
+		num -= num%10n;
+		num /= 10n;
 	}
 	return ret;
 }
