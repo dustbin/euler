@@ -6,6 +6,6 @@ function problem16(){
 		num -= num%10;
 		num /= 10;
 	}
-	return BigInt.asIntN(32,ret);
+	return ret.toString();
 }
 Problem.create("problem 16",problem16,null);
