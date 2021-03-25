@@ -1,5 +1,3 @@
-export Problem;
-
 class Problem{
 	static loaded = false;
 	static problems = [];
