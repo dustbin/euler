@@ -7,5 +7,4 @@ function problem17(){
 	}
 	return sum;
 }
-problem17.regex = 
 Problem.create("problem 17",problem17,null);
