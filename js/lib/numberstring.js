@@ -44,6 +44,7 @@ class NumberString {
 		let t = 0;
 		while(n>0){
 			if(n%1000!=0){
+				if(ret.length>0){ret = " "+ret;}
 				if(t>0){
 					ret = NumberString.convertHundreds(n%1000) + " " + NumberString.groupC[t] + ret;
 				}else{
