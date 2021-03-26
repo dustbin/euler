@@ -59,11 +59,19 @@ class NumberString {
 	static convertHundreds(n){
 		let ret = "";
 		if(n>=100){
-			ret += NumberString.groupA[Math.floor(n/100)] + " hundred and ";
+			if(n%100==0){
+				ret += NumberString.groupA[Math.floor(n/100)] + " hundred";
+			}else{
+				ret += NumberString.groupA[Math.floor(n/100)] + " hundred and ";
+			}
 		}
 		n %= 100;
 		if(n>=20){
-			ret += NumberString.groupB[Math.floor(n/10)] +"-"+NumberString.groupA[n%10];
+			if(n%10==0){
+				ret += NumberString.groupB[Math.floor(n/10)];
+			}else{
+				ret += NumberString.groupB[Math.floor(n/10)] +"-"+NumberString.groupA[n%10];
+			}
 		}else if(n>0){
 			ret += NumberString.groupA[n];
 		}
