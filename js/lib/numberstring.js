@@ -44,7 +44,11 @@ class NumberString {
 		let t = 0;
 		while(n>0){
 			if(n%1000!=0){
-				ret = NumberString.convertHundreds(n%1000) + NumberString.groupC[t] + ret;
+				if(t>0){
+					ret = NumberString.convertHundreds(n%1000) + " " + NumberString.groupC[t] + ret;
+				}else{
+					ret = NumberString.convertHundreds(n%1000);
+				}
 			}
 			t += 1;
 			n = (n-n%1000)/1000
