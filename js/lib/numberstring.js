@@ -26,7 +26,7 @@ class NumberString {
 		"ten",
 		"twenty",
 		"thirty",
-		"fourty",
+		"forty",
 		"fifty",
 		"sixty",
 		"seventy",
