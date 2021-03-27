@@ -3,8 +3,8 @@ function problem20(){
 	for(let i=2n;i<=100n;++i){
 		fact*=i;
 	}
-	let sum = 0;
-	while(fact>0){
+	let sum = 0n;
+	while(fact>0n){
 		sum += fact%10n;
 		fact = (fact - fact%10n)/10n;
 	}
