@@ -10,4 +10,4 @@ function problem20(){
 	}
 	return sum;
 }
-Problem.create("problem 20",problem20,null);
+Problem.create("problem 20",problem20,648);
