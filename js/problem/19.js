@@ -6,7 +6,7 @@ function problem19(){
 		d.setFullYear(i);
 		for(let j=0;j<12;++j){
 			d.setMonth(j);
-			if(d.getDay()==1){
+			if(d.getDay()==0){
 				sum+=1;
 			}
 		}
