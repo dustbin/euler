@@ -1,7 +1,7 @@
 function problem19(){
 	let sum = 0;
 	let d = new Date();
-	d.setDay(1);
+	d.setDate(1);
 	for(let i=1901;i<=2000;++i){
 		d.setFullYear(i);
 		for(let j=0;j<12;++j){
