@@ -29,6 +29,7 @@ class Prime {
 		}
 	}
 	factors(n){
+		if(n<2){return [];}
 		let ret = [];
 		for(let i=0;;++i){
 			let p = this.getPrime(i);
@@ -46,5 +47,23 @@ class Prime {
 			}
 		}
 		return ret;
+	}
+	divisors(n){
+		let factors = this.factors(n);
+		let divisors = [1];
+		for(let i=0;i<factors.length;++i){
+			let newDivisors = [];
+			for(let j=1;j<=factors[i][1];++j){
+				let t = factors[i][0]**j;
+				for(let k=0;k<divisors.length;++k){
+					newDivisors.push(divisors[i]*t);
+				}
+			}
+			divisors = divisors.concat(newDivisors);
+		}
+		return divisors;
+	}
+	divisorSum(n){
+		return this.divisors(n).reduce((a,c)=>a+c,-n);
 	}
 }
