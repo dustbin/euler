@@ -2,7 +2,8 @@ function problem21(){
 	let prime = new Prime();
 	let sum = 0;
 	for(let i=2;i<10000;++i){
-		if(prime.divisorSum(prime.divisorSum(i))==i){
+		let t = prime.divisorSum(i);
+		if(t!=i&&prime.divisorSum(t)==i){
 			sum+=i;
 		}
 	}
