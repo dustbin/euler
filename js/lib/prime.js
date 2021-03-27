@@ -49,19 +49,19 @@ class Prime {
 		return ret;
 	}
 	divisors(n){
-		let factors = this.factors(n);
-		let divisors = [1];
-		for(let i=0;i<factors.length;++i){
-			let newDivisors = [];
-			for(let j=1;j<=factors[i][1];++j){
-				let t = factors[i][0]**j;
-				for(let k=0;k<divisors.length;++k){
-					newDivisors.push(divisors[i]*t);
+		let facts = this.factors(n);
+		let divs = [1];
+		for(let i=0;i<facts.length;++i){
+			let newDivs = [];
+			for(let j=1;j<=facts[i][1];++j){
+				let t = facts[i][0]**j;
+				for(let k=0;k<divs.length;++k){
+					newDivs.push(divs[k]*t);
 				}
 			}
-			divisors = divisors.concat(newDivisors);
+			divs = divs.concat(newDivs);
 		}
-		return divisors;
+		return divs;
 	}
 	divisorSum(n){
 		return this.divisors(n).reduce((a,c)=>a+c,-n);
