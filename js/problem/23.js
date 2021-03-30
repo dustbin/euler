@@ -24,4 +24,4 @@ function problem23(){
 	}
 	return sum;
 }
-Problem.create("problem 23",problem23,null);
+Problem.create("problem 23",problem23,4179871);
