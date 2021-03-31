@@ -65,4 +65,8 @@ class PiSummation{
 			this.current /= n;
 		}
 	}
+	static factorial(n){
+		if(n==1){return 1;}
+		return PiSummation.factorial(n-1)*n;
+	}
 }
