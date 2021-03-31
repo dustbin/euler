@@ -11,4 +11,4 @@ problem24.f = function(a,n){
 	a.splice(t,1);
 	return ret + problem24.f(a,n-f*t);
 }
-Problem.create("problem 24",problem24,null);
+Problem.create("problem 24",problem24,2783915460);
