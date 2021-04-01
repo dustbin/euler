@@ -6,4 +6,4 @@ function problem25(){
 		}
 	}
 }
-Problem.create("problem 25",problem25,null);
+Problem.create("problem 25",problem25,4782);
