@@ -1,5 +1,5 @@
 class Fibonacci{
-	fibs = [1,2];
+	fibs = [1n,2n];
 	constructor(){
 	}
 	getFibonacci(index){
