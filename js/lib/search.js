@@ -1,4 +1,4 @@
-class Match{
+class Search{
 	constructor(n0,n1){
 		this.n0 = n0;
 		this.n1 = n1;
