@@ -1,10 +1,10 @@
 class Search{
-	constructor(n0,n1,a,compare){
+	constructor(n0,n1,a,fCompare){
 		this.n0 = n0;
 		this.n1 = n1;
 		this.i = 0;
 		this.a = a;
-		this.compare = compare;
+		this.compare = fCompare;
 	}
 	check(){
 		let t0 = this.a[this.n0+this.i];
@@ -20,8 +20,11 @@ class Search{
 	increment(){
 		this.i+=1;
 	}
-	slice(){
-		this.a.slice(this.n0,this.n1);
+	slice(fExtract){
+		if(fExtract){
+			return this.a.slice(this.n0,this.n1).map(fExtract);
+		}
+		return this.a.slice(this.n0,this.n1);
 	}
 	static getRepeating(n,d){
 		let a = [];
@@ -41,7 +44,7 @@ class Search{
 				searches[j].increment();
 				t = searches[j].check();
 				if(t==2){
-					return searches[j].slice(a);
+					return searches[j].slice(Search.extractRepeating);
 				}else if(t==1){
 					newSearches.push(searches[j]);
 				}
@@ -52,5 +55,8 @@ class Search{
 	}
 	static compareRepeating = function(a,b){
 		return a.every((e,i) => e==b[i]);
+	}
+	static extractRepeating = function(a){
+		return a[0];
 	}
 }
