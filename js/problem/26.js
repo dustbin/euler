@@ -1,9 +1,13 @@
 function problem26(){
-	let max = 0;
+	let maxL = 0;
+	let maxN = 0;
 	for(let i=1;i<1000;++i){
 		let t = Search.getRepeating(1,i);
-		if(t.length>max){max = t.length;}
+		if(t.length>maxL){
+			maxL = t.length;
+			maxN = i;
+		}
 	}
-	return max;
+	return maxN;
 }
 Problem.create("problem 26",problem26,null);
