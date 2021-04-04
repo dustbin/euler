@@ -35,7 +35,7 @@ class Search{
 				searches.push(new Search(j,a.length));
 			}
 			a.push(t);
-			n=(n%i)*10;
+			n=(n%d)*10;
 		}
 		return a;
 	}
