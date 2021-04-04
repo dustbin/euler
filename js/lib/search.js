@@ -31,14 +31,14 @@ class Search{
 		let newSearches,j,t;
 		while(n%d!=0){
 			t = [Math.floor(n/d),n];
+			newSearches = [];
 			for(j=0;j<a.length;++j){
 				if(Search.compareRepeating(a[j],t)){
-					searches.push(new Search(j,a.length,a,Search.compareRepeating));
+					newSearches.push(new Search(j,a.length,a,Search.compareRepeating));
 				}
 			}
 			a.push(t);
 			n=(n%d)*10;
-			newSearches = [];
 			for(j in searches){
 				searches[j].increment();
 				t = searches[j].check();
