@@ -22,7 +22,7 @@ class Search{
 	increment(){
 		this.i+=1;
 	}
-	this.slice(){
+	slice(){
 		this.a.slice(this.n0,this.s);
 	}
 	static getRepeating(n,d){
