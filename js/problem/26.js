@@ -1,7 +1,7 @@
 function problem26(){
 	let max = 0;
 	for(let i=1;i<1000;++i){
-		let t = Search.getRepeating(i);
+		let t = Search.getRepeating(1,i);
 		if(t.length>max){max = t.length;}
 	}
 	return max;
