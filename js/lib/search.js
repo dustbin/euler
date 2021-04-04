@@ -3,7 +3,6 @@ class Search{
 		this.n0 = n0;
 		this.n1 = n1;
 		this.i = 0;
-		this.s = 0;
 		this.a = a;
 		this.compare = compare;
 	}
@@ -12,7 +11,6 @@ class Search{
 		let t1 = this.a[this.n1+this.i];
 		if(this.compare(t0,t1)){
 			if(this.n0+this.i==this.n1){
-				this.s = this.i
 				return 2;
 			}
 			return 1;
@@ -23,7 +21,7 @@ class Search{
 		this.i+=1;
 	}
 	slice(){
-		this.a.slice(this.n0,this.s);
+		this.a.slice(this.n0,this.n1);
 	}
 	static getRepeating(n,d){
 		let a = [];
