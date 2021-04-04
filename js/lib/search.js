@@ -41,7 +41,7 @@ class Search{
 			newSearches = [];
 			for(j in searches){
 				searches[j].increment();
-				t = searches[j].compare(a,Search.compareRepeating);
+				t = searches[j].check();
 				if(t==2){
 					return searches[j].slice(a);
 				}else if(t==1){
