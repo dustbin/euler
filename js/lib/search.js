@@ -1,14 +1,16 @@
 class Search{
-	constructor(n0,n1){
+	constructor(n0,n1,a,compare){
 		this.n0 = n0;
 		this.n1 = n1;
 		this.i = 0;
 		this.s = 0;
+		this.a = a;
+		this.compare = compare;
 	}
-	check(a,compare){
-		let t0 = a[this.n0+this.i];
-		let t1 = a[this.n1+this.i];
-		if(compare(t0,t1)){
+	check(){
+		let t0 = this.a[this.n0+this.i];
+		let t1 = this.a[this.n1+this.i];
+		if(this.compare(t0,t1)){
 			if(this.n0+this.i==this.n1){
 				this.s = this.i
 				return 2;
@@ -17,26 +19,40 @@ class Search{
 		}
 		return 0;
 	}
-	size(){
-		this.s;
-	}
 	increment(){
 		this.i+=1;
+	}
+	this.slice(){
+		this.a.slice(this.n0,this.s);
 	}
 	static getRepeating(n,d){
 		let a = [];
 		let searches = [];
+		let newSearches,j,t;
 		while(n%d!=0){
-			let t = [Math.floor(n/d),n];
-			let j = -1;
-			while(true){
-				j = a.indexOf(n,j+1);
-				if(j<0){break;}
-				searches.push(new Search(j,a.length));
+			t = [Math.floor(n/d),n];
+			for(j=0;j<a.length;++j){
+				if(Search.compareRepeating(a[j],t)){
+					searches.push(new Search(j,a.length,a,Search.compareRepeating));
+				}
 			}
 			a.push(t);
 			n=(n%d)*10;
+			newSearches = [];
+			for(j in searches){
+				searches[j].increment();
+				t = searches[j].compare(a,Search.compareRepeating);
+				if(t==2){
+					return searches[j].slice(a);
+				}else if(t==1){
+					newSearches.push(searches[j]);
+				}
+			}
+			searches = newSearches;
 		}
-		return a;
+		return [];
+	}
+	static compareRepeating = function(a,b){
+		return a.every((e,i) => e==b[i]);
 	}
 }

@@ -6,7 +6,4 @@ function problem26(){
 	}
 	return max;
 }
-problem26.compare = function(a,b){
-	return a.every((e,i) => e==b[i]);
-}
 Problem.create("problem 26",problem26,null);
