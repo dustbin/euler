@@ -1,5 +1,6 @@
 class Prime {
 	primes = [2];
+	primeIndex = {2:0};
 	constructor(){
 	}
 	getPrime(index){
@@ -9,19 +10,20 @@ class Prime {
 		return this.primes[index];
 	}
 	isPrime(p){
-		if(this.primes.indexOf(p)>=0){return true;}
-		while(this.primes[this.primes.length-1]**2<p){
-			this.buildPrimes(this.primes.length+1);
-			if(p%this.primes[this.primes.length-1]==0){return false;}
-		}
-		return true;
+		this.buildLessThan(p+1);
+		if(this.primeIndex[p]>=0){return true;}
+		return false;
 	}
 	buildPrimes(length){
 		if(this.primes.length>=length){return;}
 		for(let i=this.primes[this.primes.length-1]+1;this.primes.length<length;++i){
 			for(let j=0;;++j){
 				let p = this.primes[j];
-				if(i<p*p){this.primes.push(i);break;}
+				if(i<p*p){
+					this.primeIndex[this.primes.length]=i;
+					this.primes.push(i);
+					break;
+				}
 				if(i%p==0){break;}
 			}
 		}
@@ -31,7 +33,11 @@ class Prime {
 		for(let i=this.primes[this.primes.length-1]+1;i<n;++i){
 			for(let j=0;;++j){
 				let p = this.primes[j];
-				if(i<p*p){this.primes.push(i);break;}
+				if(i<p*p){
+					this.primeIndex[this.primes.length]=i;
+					this.primes.push(i);
+					break;
+				}
 				if(i%p==0){break;}
 			}
 		}
