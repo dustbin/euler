@@ -20,7 +20,7 @@ class Prime {
 			for(let j=0;;++j){
 				let p = this.primes[j];
 				if(i<p*p){
-					this.primeIndex[this.primes.length]=i;
+					this.primeIndex[i]=this.primes.length;
 					this.primes.push(i);
 					break;
 				}
@@ -34,7 +34,7 @@ class Prime {
 			for(let j=0;;++j){
 				let p = this.primes[j];
 				if(i<p*p){
-					this.primeIndex[this.primes.length]=i;
+					this.primeIndex[i]=this.primes.length;
 					this.primes.push(i);
 					break;
 				}
