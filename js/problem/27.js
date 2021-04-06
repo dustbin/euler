@@ -17,4 +17,4 @@ function problem27(){
 	return maxV;
 }
 
-Problem.create("problem 27",problem27,null);
+Problem.create("problem 27",problem27,-59231);
