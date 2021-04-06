@@ -8,6 +8,14 @@ class Prime {
 		}
 		return this.primes[index];
 	}
+	isPrime(p){
+		if(this.primes.indexOf(p)>=0){return true;}
+		while(this.primes[this.primes.length-1]**2<p){
+			this.buildPrimes(this.primes.length+1);
+			if(p%this.primes[this.primes.length-1]==0){return false;}
+		}
+		return true;
+	}
 	buildPrimes(length){
 		if(this.primes.length>=length){return;}
 		for(let i=this.primes[this.primes.length-1]+1;this.primes.length<length;++i){
