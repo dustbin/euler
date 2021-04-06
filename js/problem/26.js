@@ -10,4 +10,4 @@ function problem26(){
 	}
 	return maxN;
 }
-Problem.create("problem 26",problem26,null);
+Problem.create("problem 26",problem26,983);
