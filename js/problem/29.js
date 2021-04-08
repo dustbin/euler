@@ -5,6 +5,6 @@ function problem29(){
 			d[a**b] = true;
 		}
 	}
-	return d.keys().length;
+	return Object.keys(d).length;
 }
 Problem.create("problem 29",problem29,null);
