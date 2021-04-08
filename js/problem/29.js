@@ -7,4 +7,4 @@ function problem29(){
 	}
 	return Object.keys(d).length;
 }
-Problem.create("problem 29",problem29,null);
+Problem.create("problem 29",problem29,9183);
